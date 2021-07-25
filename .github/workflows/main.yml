@@ -34,8 +34,8 @@ jobs:
             template: ./ResourceGroup/ResourceGroup.bicep
 
     - name: Deploy virtual network
-        uses: azure/arm-deploy@main
-        with:
+      uses: azure/arm-deploy@main
+      with:
             scope: subscription
             subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
             region: westeurope
