@@ -39,7 +39,7 @@ var Citrix_vNet_dnsServers = [
   '192.168.10.10'
 ]
 
-module CitrixvNet './modules/network/vNet.bicep' = {
+module CitrixvNet './blob/main/modules/network/vNet.bicep' = {
   name: 'Citrix-vNet-Deployment'
   params: {
     dnsServers: Citrix_vNet_dnsServers
@@ -54,7 +54,7 @@ module CitrixvNet './modules/network/vNet.bicep' = {
   scope: resourceGroup(Citrix_ResourceGroup)
 }
  
-module SharedservicevNet './modules/network/vNet.bicep' = {
+module SharedservicevNet './blob/main/modules/network/vNet.bicep' = {
   name: 'Sharedservice-vNet-Deployment'
   params: {
     dnsServers: Sharedservice_vNet_dnsServers
@@ -67,7 +67,7 @@ module SharedservicevNet './modules/network/vNet.bicep' = {
 }
 
 
-module CitrixPeering './modules/network/Peering.bicep' = {
+module CitrixPeering './blob/main/modules/network/Peering.bicep' = {
   name: 'CitrixvNetPeering'
   params: {
     allowForwardedTraffic: true
@@ -83,7 +83,7 @@ module CitrixPeering './modules/network/Peering.bicep' = {
   ]
   scope: resourceGroup(Citrix_ResourceGroup)
 }
-module SharedservicePeering './modules/network/Peering.bicep' = {
+module SharedservicePeering './blob/main/modules/network/Peering.bicep' = {
   name: 'SharedServicevNetPeering'
   params: {
     allowForwardedTraffic: true
