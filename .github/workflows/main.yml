@@ -18,14 +18,14 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-
-    - name: Login to Azure
     - uses: actions/checkout@master
+    
+    - name: Login to Azure
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS_BLOGSERIES }}
 
-    - name: Deploy RG
+    - name: Deploy Resource Group
       - uses: azure/arm-deploy@main
          with:
             scope: subscription
