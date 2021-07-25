@@ -28,16 +28,16 @@ jobs:
     - name: Deploy Resource Group
       uses: azure/arm-deploy@main
       with:
-            scope: subscription
-            subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-            region: westeurope
-            template: ./ResourceGroup/ResourceGroup.bicep
+          scope: subscription
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+          region: westeurope
+          template: ./ResourceGroup/ResourceGroup.bicep
 
     - name: Deploy virtual network
       uses: azure/arm-deploy@main
       with:
-            scope: subscription
-            subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-            region: westeurope
-            template: ./Deployment.bicep
+          scope: subscription
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+          region: westeurope
+          template: ./Deployment.bicep
 
