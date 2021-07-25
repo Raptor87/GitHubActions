@@ -41,7 +41,7 @@ jobs:
           region: westeurope
           template: ./Modules/Deployment.bicep
 
-- name: Deploy VPN
+    - name: Deploy VPN
       uses: azure/arm-deploy@main
       with:
           scope: resourcegroup
