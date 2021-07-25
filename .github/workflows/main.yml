@@ -39,5 +39,5 @@ jobs:
           scope: subscription
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           region: westeurope
-          template: ./Deployment.bicep
+          template: ./blob/main/Deployment.bicep
 
