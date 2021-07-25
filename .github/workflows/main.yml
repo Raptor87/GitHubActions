@@ -27,7 +27,7 @@ jobs:
 
     - name: Deploy Resource Group
       uses: azure/arm-deploy@main
-         with:
+      with:
             scope: subscription
             subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
             region: westeurope
@@ -35,7 +35,7 @@ jobs:
 
     - name: Deploy virtual network
         uses: azure/arm-deploy@main
-          with:
+        with:
             scope: subscription
             subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
             region: westeurope
